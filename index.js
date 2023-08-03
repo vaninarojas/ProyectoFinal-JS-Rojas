@@ -27,8 +27,6 @@ function crearCardProducto(producto, index) {
 }
 
 
-
-
 function agregarAlCarrito(precio) {
   carrito.push(precio);
   totalPrecio += precio;
@@ -40,10 +38,7 @@ function agregarAlCarrito(precio) {
     text: 'El producto ha sido añadido al carrito de compras.',
   });
 
-
-
 }
-
 
 function eliminarDelCarrito(index, precio) {
   carrito.splice(index, 1);
@@ -55,10 +50,6 @@ function eliminarDelCarrito(index, precio) {
     title: '¡Producto eliminado del carrito!',
     text: 'El producto ha sido eliminado del carrito de compras.',
   });
-
-
- 
-  
 
 }
 
