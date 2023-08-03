@@ -1,0 +1,81 @@
+.logovanis{width: 20%; height: auto; }
+
+header{display: flex;
+flex-direction: row;
+justify-content: space-between;}
+
+
+li{list-style-type: none ; padding: 10px;margin: 10px; font-family: 'Times New Roman', Times, serif;}
+
+    li{display: inline;}
+
+    a{text-decoration: none;color: black; font-size: 20px;}
+
+    header,footer{background-color: violet;}
+
+
+.imgprincipal{width: 100%; height:auto; display: flex; justify-content: center; border-radius: 20px;
+padding:5px; margin: 5px;}
+
+.rrss, .contacto{font-size: 20px; color: black;font-family: 'Times New Roman', Times, serif;}
+
+.ig{width: 50%;height: auto; border-radius: 10px;}
+
+.logovanisF{width: 100%;height: auto;}
+
+footer{display: flex; padding: 20px;
+    flex-direction: row; 
+    justify-content: space-between;}
+
+    .m20 {
+        margin: 20px;
+      }
+
+    .gridcontacto {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto;
+      }
+
+      .gridcontacto {
+        display: grid;
+        grid-template-areas: "encabezado encabezado" "form infoContacto" "form  iframe";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto;
+      }
+      .encabezadoContacto {
+        grid-area: encabezado;
+      }
+      .form {
+        grid-area: form;
+      }
+      .infoContacto {
+        grid-area: infoContacto;
+      }
+      .iframe {
+        grid-area: iframe;
+      }
+    
+.contacto1 {color: rgb(14, 13, 13); font-family: 'Times New Roman', Times, serif; font-style: italic; text-align: center;}
+
+.maincolor{background-color:  rgb(226, 167, 240);}
+
+.m20{margin: 20px;}
+
+.p20{padding: 10px;}
+
+form{display: flex; flex-direction: column;}
+
+h5, h6 {font-size: 20px;font-family: 'Times New Roman', Times, serif;}
+
+.listaprodu{text-align: center;font-family: 'Times New Roman', Times, serif;}
+
+.mainprodu{text-align: center; font-family: 'Times New Roman', Times, serif;}
+
+.catalogo{text-align: center;font-family: 'Times New Roman', Times, serif;}
+
+.card-title{text-align: center; font-family: 'Times New Roman', Times, serif; color: blueviolet;}
+
+.btn{background-color:rgb(130, 10, 130);}
+
+.comp{text-align: center;}

@@ -1,0 +1,86 @@
+[
+
+    {
+        "id": 1,
+        "nombre": "Paletas",
+        "precio": 5600,
+        "categoria": "Sombras",
+        "stock": 45,
+        "imgUrl": "https://m.media-amazon.com/images/I/81LDRu+48lL.jpg"
+
+    },
+
+    {
+        "id": 2,
+        "nombre": "Glitter para ojos",
+        "precio": 2500,
+        "categoria": "Sombras",
+        "stock": 130,
+        "imgUrl": "https://www.quecoreana.cl/wp-content/uploads/2021/05/glitter_adf1d606-2524-46e1-a293-f1438212e571_1024x1024.png"
+    },
+
+    {
+        "id": 3,
+        "nombre": "Pack de Brochas",
+        "precio": 5000,
+        "categoria": "Sombras",
+        "stock": 55,
+        "imgUrl": "https://m.media-amazon.com/images/I/71fMQi16DrL._AC_UF1000,1000_QL80_.jpg"
+    },
+
+    {
+        "id": 4,
+        "nombre": "Labial liquido Nude",
+        "precio": 2600,
+        "categoria": "Labiales",
+        "stock": 30,
+        "imgUrl": "https://www.infinitycosmetics.it/cdn/shop/products/1_2_1000x1000.jpg?v=1631535890"
+    },
+
+    {
+        "id": 5,
+        "nombre": "Labial cremoso red",
+        "precio": 3000,
+        "categoria": "Labiales",
+        "stock": 50,
+        "imgUrl": "https://eco-beauty.dior.com/dw/image/v2/BDGF_PRD/on/demandware.static/-/Sites-master_dior/default/dwf970a4f9/assets/Y0172009/Y0172009_C017500999_E02_GHC.jpg?sw=715&sh=773&sm=fit&imwidth=800"
+    },
+
+
+    {
+        "id": 6,
+        "nombre": "Rubor",
+        "precio": 6200,
+        "categoria": "Rostro",
+        "stock": 70,
+        "imgUrl": "https://falabella.scene7.com/is/image/FalabellaPE/14674355_1?wid=800&hei=800&qlt=70"
+    },
+    {
+        "id": 7,
+        "nombre": "Rimel",
+        "precio": 8500,
+        "categoria": "Rostro",
+        "stock": 65,
+        "imgUrl": "https://d5gag3xtge2og.cloudfront.net/producao/33417875/G/mascara_rimel_tango_4d_2x1_alonga_e_da_volume_aos_cilios_05.jpg"
+    },
+
+    {
+        "id": 8,
+        "nombre": "Polvo de hadas",
+        "precio": 5900,
+        "categoria": "Rostro",
+        "stock": 27,
+        "imgUrl": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/047/327/products/92658336-edb6-4369-aa28-5a917f066a1f1-e00b86916c423b36b016668877661553-640-0.jpeg"
+    },
+
+    {
+        "id": 9,
+        "nombre": "Base",
+        "precio": 4500,
+        "categoria": "Rostro",
+        "stock": 100,
+        "imgUrl": "https://www.sephora.es/dw/image/v2/BCVW_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw51b68809/images/hi-res/SKU/SKU_3850/652808_swatch.jpg?sw=240&sh=240&sm=fit"
+    }
+
+
+]
