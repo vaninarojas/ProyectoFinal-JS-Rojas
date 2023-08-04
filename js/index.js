@@ -55,7 +55,7 @@ function eliminarDelCarrito(index, precio) {
 
 
 function mostrarProductosDesdeJSON() {
-  fetch("/data/data.json")
+  fetch("../data/data.json")
     .then(response => response.json())
     .then(data => {
       data.forEach((producto, index) => {
