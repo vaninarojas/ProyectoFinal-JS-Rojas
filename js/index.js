@@ -27,10 +27,25 @@ function crearCardProducto(producto, index) {
 }
 
 
-function agregarAlCarrito(precio) {
+
+const listaProductosSeleccionados = document.getElementById("listaProductosSeleccionados");
+
+function actualizarListaProductosSeleccionados() {
+    listaProductosSeleccionados.innerHTML = "";
+    carrito.forEach((precio, index) => {
+        const producto = productos[index];
+        const li = document.createElement("li");
+        li.textContent = `${producto.nombre} - $${precio}`;
+        listaProductosSeleccionados.appendChild(li);
+    });
+}
+
+
+function agregarAlCarrito(precio,index) {
   carrito.push(precio);
   totalPrecio += precio;
   totalPrecioSpan.textContent = totalPrecio;
+  actualizarListaProductosSeleccionados();
 
   Swal.fire({
     icon: 'success',
@@ -44,6 +59,7 @@ function eliminarDelCarrito(index, precio) {
   carrito.splice(index, 1);
   totalPrecio -= precio;
   totalPrecioSpan.textContent = totalPrecio;
+  actualizarListaProductosSeleccionados();
 
   Swal.fire({
     icon: 'error',
@@ -58,6 +74,7 @@ function mostrarProductosDesdeJSON() {
   fetch("../data/data.json")
     .then(response => response.json())
     .then(data => {
+      productos = data;
       data.forEach((producto, index) => {
         const card = crearCardProducto(producto, index);
         cardContainer.appendChild(card);
@@ -76,6 +93,7 @@ comprarBtn.addEventListener("click", () => {
   carrito = [];
   totalPrecio = 0;
   totalPrecioSpan.textContent = totalPrecio;
+  actualizarListaProductosSeleccionados();
 
 });
 
