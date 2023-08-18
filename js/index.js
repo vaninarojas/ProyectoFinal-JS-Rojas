@@ -2,6 +2,7 @@ const cardContainer = document.getElementById("cardContainer");
 const totalPrecioSpan = document.getElementById("totalPrecio");
 const comprarBtn = document.getElementById("comprarBtn");
 
+let productos = [];
 let carrito = [];
 let totalPrecio = 0;
 
@@ -18,7 +19,8 @@ function crearCardProducto(producto, index) {
         <p>Stock: ${producto.stock}</p>
         
         <h6 class="card-text">Precio: $${producto.precio}</h6>
-    <button class="btn btn-primary" onclick="agregarAlCarrito(${producto.precio})">Agregar al carrito</button>
+        
+    <button class="btn btn-primary" onclick="agregarAlCarrito(${index}, ${producto.precio},)">Agregar al carrito</button>
     <button class="btn btn-danger" onclick="eliminarDelCarrito(${index}, ${producto.precio})">Eliminar del carrito</button>
       </div>
     </div>
@@ -32,8 +34,9 @@ const listaProductosSeleccionados = document.getElementById("listaProductosSelec
 
 function actualizarListaProductosSeleccionados() {
     listaProductosSeleccionados.innerHTML = "";
-    carrito.forEach((precio, index) => {
-        const producto = productos[index];
+    carrito.forEach((index) => {
+      const producto = productos[index];
+      const precio = producto.precio;
         const li = document.createElement("li");
         li.textContent = `${producto.nombre} - $${precio}`;
         listaProductosSeleccionados.appendChild(li);
@@ -41,8 +44,8 @@ function actualizarListaProductosSeleccionados() {
 }
 
 
-function agregarAlCarrito(precio,index) {
-  carrito.push(precio);
+function agregarAlCarrito(index,precio) {
+  carrito.push(index);
   totalPrecio += precio;
   totalPrecioSpan.textContent = totalPrecio;
   actualizarListaProductosSeleccionados();
@@ -59,7 +62,19 @@ function eliminarDelCarrito(index, precio) {
   carrito.splice(index, 1);
   totalPrecio -= precio;
   totalPrecioSpan.textContent = totalPrecio;
-  actualizarListaProductosSeleccionados();
+  
+
+  const producto = productos[index];
+  const productoNombre = producto.nombre;
+  const productosSeleccionados = listaProductosSeleccionados.querySelectorAll("li");
+  productosSeleccionados.forEach((li) => {
+    if (li.textContent.includes(productoNombre)) {
+      li.remove();
+    }
+  });
+
+
+
 
   Swal.fire({
     icon: 'error',
@@ -85,7 +100,7 @@ function mostrarProductosDesdeJSON() {
 
 comprarBtn.addEventListener("click", () => {
   
-  swal.fire({
+  Swal.fire({
   title: "COMPRA REALIZADA CON ÉXITO",
   icon: "success",
   confirmButtonText: "OK"
